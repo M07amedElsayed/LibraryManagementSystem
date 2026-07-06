@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Services
 {
-    internal class Library
+    public class Library
     {
     }
 }

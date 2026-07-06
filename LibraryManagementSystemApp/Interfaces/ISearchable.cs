@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Interfaces
 {
-    internal class ISearchable
+    public interface ISearchable
     {
+        public bool MatchesQuery(string query);
     }
 }

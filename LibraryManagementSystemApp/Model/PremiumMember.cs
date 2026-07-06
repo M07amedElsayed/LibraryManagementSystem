@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Model
 {
-    internal class PremiumMember
+    public class PremiumMember : Member
     {
+        public override int LoanDays { get; } = 30;
     }
 }

@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem.Model
 {
-    internal class LibraryItem
+    public abstract class LibraryItem
     {
+        public int Id { get; set; }
+        public string Title { get; set; }
+
+        public DateTime AddedDate {get ; set ;}
+
+        public abstract string GetInfo();
     }
 }
