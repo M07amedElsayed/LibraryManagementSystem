@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagementSystem.Model
+namespace LibraryManagementSystem.Models
 {
     public class Book : LibraryItem, ISearchable
     {

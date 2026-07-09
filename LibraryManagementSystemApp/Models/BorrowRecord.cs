@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryManagementSystem.Model
+namespace LibraryManagementSystem.Models
 {
     public class BorrowRecord
     {
@@ -22,7 +22,9 @@ namespace LibraryManagementSystem.Model
 
         public bool IsLate()
         {
-           var days = (DateTime.Now - BorrowDate).TotalDays;
+          if (ReturnDate != null)
+                return false;
+            var days = (DateTime.Now - BorrowDate).TotalDays;
 
 
             return days > Member.LoanDays;
