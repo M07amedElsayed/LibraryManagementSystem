@@ -1,4 +1,4 @@
-﻿using LibraryManagementSystem.Model;
+﻿using LibraryManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -118,7 +118,62 @@ namespace LibraryManagementSystem.Services
             Console.WriteLine("Book borrowed successfully.");
             book1.IsAvailable = false;
         }
-
         
+        public void ReturnBook(int bookid)
+        {
+            Book book = FindBookById(bookid);
+
+
+            if(book == null )
+            {
+                Console.WriteLine("The is not exist.");
+                return;
+            }
+
+            for (int i = 0; i < currentborrowscount; i++)
+            {
+                if (Borrowrecords[i].Book.Id== bookid && Borrowrecords[i].ReturnDate == null)
+                {
+                    Borrowrecords[i].Book.IsAvailable = true;
+
+                    Borrowrecords[i].ReturnDate= DateTime.Now;
+                    Console.WriteLine("Book returned successfully.");
+                    return;
+                }                
+            }
+            Console.WriteLine("The Book is not currently borrowed");
+        }
+        
+
+        public void SearchCatalog(string query)
+        {
+            
+
+                for (int i = 0; i < currenbookcount; i++)
+                {
+                    if (books[i].MatchesQuery(query))
+                    {
+
+                        Console.WriteLine(books[i].GetInfo());
+
+                    }
+                }
+
+
+
+
+            for (int i = 0; i < currentmembercount; i++)
+            {
+                if (members[i].MatchesQuery(query))
+                {
+                    Console.WriteLine($"Id :{members[i].Id},Name : {members[i].Name}, Email : {members[i].Email} ");
+
+                }
+            }
+
+
+
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using LibraryManagementSystem.Model;
+﻿using LibraryManagementSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
