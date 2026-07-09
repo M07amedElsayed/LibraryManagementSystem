@@ -22,7 +22,9 @@ namespace LibraryManagementSystem.Models
 
         public bool IsLate()
         {
-           var days = (DateTime.Now - BorrowDate).TotalDays;
+          if (ReturnDate != null)
+                return false;
+            var days = (DateTime.Now - BorrowDate).TotalDays;
 
 
             return days > Member.LoanDays;
