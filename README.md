@@ -1,6 +1,6 @@
 # Library Management System
 
-Console Application built with C#
+Console application built using C# and Object-Oriented Programming.
 
 ## Features
 
@@ -9,12 +9,13 @@ Console Application built with C#
 - Borrow Book
 - Return Book
 - Search Catalog
-- View Available Books
-- Borrow History
 - Late Return Report
 
-## Technologies
+## Concepts Used
 
-- C#
 - OOP
-- Git
+- Inheritance
+- Polymorphism
+- Abstract Classes
+- Interfaces
+- Arrays
