@@ -33,15 +33,14 @@ namespace LibraryManagementSystem.Services
                 books [currenbookcount] = book;
                 currenbookcount++;
                 book.Id = currenbookcount;
-
+                book.IsAvailable = true;
                 Console.WriteLine("The Book Added Sucsessfuly.");
             }
             else
             {
                 Console.WriteLine("Library is full, canot add books");
             }
-
-
+             
         }
 
         public void RegisterMember(Member member)
@@ -57,7 +56,8 @@ namespace LibraryManagementSystem.Services
             member.JoinDate = DateTime.Now;
             
             currentmembercount++;
-
+            Console.WriteLine("The Member Added Sucsessfuly.");
+             
         }
 
         public Book FindBookById(int id)
